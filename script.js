@@ -74,11 +74,13 @@ function getHolidays(month, year) {
         var holidays = isData.response;
 
         printHolidays(holidays);
+      } else {
+        alert("Il calendario è valido solo per il 2018!")
       }
     },
     error: function(request, state, error) {
 
-      alert("Il calendario vale solo per il 2018!");
+      alert("L'indirizzo del server è errato!");
     }
   })
 }
@@ -100,11 +102,34 @@ function init() {
 
   var month = 0;
   var year = 2018;
-  var next = $("#next")
+  var next = $("#next");
+  var prew = $("#prew");
 
   printTitle(month, year);
   printDate(month, year);
-  getHolidays(month, year)
+  getHolidays(month, year);
+
+  next.click(function() {
+
+    month++
+
+    $("li").remove();
+    printTitle(month, year);
+    printDate(month, year);
+    getHolidays(month, year);
+    console.log(month);
+  });
+
+  prew.click(function() {
+
+    month--
+
+    $("li").remove();
+    printTitle(month, year);
+    printDate(month, year);
+    getHolidays(month, year);
+    console.log(month);
+  })
 }
 
-$(document).ready(init)
+$(document).ready(init);
