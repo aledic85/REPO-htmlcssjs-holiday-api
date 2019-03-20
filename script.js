@@ -95,6 +95,7 @@ function printHolidays(holidays) {
     var liRed = $("li[data-date='" + date + "']");
 
     liRed.addClass("liRed");
+    liRed.text(name)
   }
 }
 

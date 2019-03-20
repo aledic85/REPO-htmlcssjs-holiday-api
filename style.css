@@ -8,7 +8,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(162, 227, 211);
+  background-color: rgb(205, 229, 237);
 }
 
 .container {
@@ -36,5 +36,20 @@ body {
 }
 
 .liRed {
-  color: red;
+  background-color: rgb(205, 92, 103);
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%
+}
+
+li {
+  display: flex;
+  width: 15%;
+  height: 15%;
+  border: 1px solid white;
+  align-items: center;
+  justify-content:center;
 }
