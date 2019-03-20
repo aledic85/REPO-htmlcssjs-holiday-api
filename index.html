@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Holiday - api</title>
+    <!-- JS: JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- JS: MOMENT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- JS: HANDLEBARS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js" charset="utf-8"></script>
+    <!-- CSS: FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!-- GOOGLE FONT : ROBOTO -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <!-- JS: MY SCRIPT -->
+    <script src="script.js" charset="utf-8"></script>
+    <!-- CSS: MY CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- HANDLEBARS TEMPLATE -->
+    <script id="template" type="text/x-handlebars-template">
+      <li data-date = "{{format}}">{{date}}</li>
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <button id="prew" type="button" name="button">Prew</button>
+        <h1></h1>
+        <button id="next" type="button" name="button">Next</button>
+      </div>
+      <div class="wrapper">
+        <ul>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
