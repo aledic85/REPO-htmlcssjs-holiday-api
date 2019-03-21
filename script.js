@@ -12,9 +12,7 @@ function printTitle(month, year) {
 
 function printDate(month, year) {
 
-  var mom = moment();
-  var daysInMonth = mom.daysInMonth();
-
+  var daysInMonth = moment().month(month).daysInMonth();
   var template = $("#template").html()
   var compiled = Handlebars.compile(template)
 
@@ -118,7 +116,6 @@ function init() {
     printTitle(month, year);
     printDate(month, year);
     getHolidays(month, year);
-    console.log(month);
   });
 
   prew.click(function() {
@@ -129,7 +126,6 @@ function init() {
     printTitle(month, year);
     printDate(month, year);
     getHolidays(month, year);
-    console.log(month);
   })
 }
 
